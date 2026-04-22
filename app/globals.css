@@ -1,0 +1,117 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ─── Design System: CSS Custom Properties ─────────────────────────────── */
+
+:root {
+  /* Light theme (fallback / explicit .light class) */
+  --background: 0 0% 98%;
+  --foreground: 0 0% 4%;
+
+  --card: 0 0% 96%;
+  --card-foreground: 0 0% 4%;
+
+  --primary: 0 0% 7%;
+  --primary-foreground: 0 0% 98%;
+
+  --secondary: 0 0% 92%;
+  --secondary-foreground: 0 0% 4%;
+
+  --muted: 0 0% 92%;
+  --muted-foreground: 0 0% 40%;
+
+  --accent: 0 0% 92%;
+  --accent-foreground: 0 0% 4%;
+
+  --border: 0 0% 86%;
+  --input: 0 0% 86%;
+  --ring: 0 0% 7%;
+
+  --radius: 0.75rem;
+}
+
+.dark {
+  /* Dark theme (default via next-themes) */
+  --background: 0 0% 4%;
+  --foreground: 60 9% 96%;
+
+  --card: 0 0% 7%;
+  --card-foreground: 60 9% 96%;
+
+  --primary: 60 9% 93%;
+  --primary-foreground: 0 0% 4%;
+
+  --secondary: 0 0% 11%;
+  --secondary-foreground: 60 9% 96%;
+
+  --muted: 0 0% 11%;
+  --muted-foreground: 0 0% 55%;
+
+  --accent: 0 0% 11%;
+  --accent-foreground: 60 9% 96%;
+
+  --border: 0 0% 15%;
+  --input: 0 0% 15%;
+  --ring: 60 9% 93%;
+
+  --radius: 0.75rem;
+}
+
+/* ─── Base Resets ──────────────────────────────────────────────────────── */
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans antialiased;
+    font-feature-settings: 'ss01', 'ss02', 'cv01', 'cv02';
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+  }
+
+  /* Custom scrollbar — dark */
+  ::-webkit-scrollbar {
+    width: 5px;
+    height: 5px;
+  }
+  ::-webkit-scrollbar-track {
+    background: hsl(var(--background));
+  }
+  ::-webkit-scrollbar-thumb {
+    background: hsl(var(--border));
+    border-radius: 100px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: hsl(var(--muted-foreground));
+  }
+
+  /* Selection color */
+  ::selection {
+    background: hsl(var(--foreground) / 0.15);
+    color: hsl(var(--foreground));
+  }
+
+  /* Focus outlines */
+  :focus-visible {
+    outline: 2px solid hsl(var(--ring));
+    outline-offset: 2px;
+  }
+}
+
+/* ─── Utility: DayPicker overrides ─────────────────────────────────────── */
+@layer utilities {
+  .rdp {
+    --rdp-cell-size: 36px;
+    --rdp-accent-color: hsl(var(--foreground));
+    --rdp-background-color: hsl(var(--muted));
+    margin: 0;
+  }
+}
