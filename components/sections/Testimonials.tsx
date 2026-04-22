@@ -128,18 +128,18 @@ export function Testimonials() {
         className="max-w-7xl mx-auto px-5 md:px-10 mt-16 flex flex-col sm:flex-row items-center justify-center gap-6 sm:gap-12"
       >
         <div className="text-center">
-          <p className="font-display font-black text-5xl text-foreground">5.0</p>
+          <p className="font-display font-black text-5xl text-foreground">4.6</p>
           <StarRating rating={5} />
           <p className="text-xs text-muted-foreground mt-2">Avaliação média</p>
         </div>
         <div className="hidden sm:block w-px h-12 bg-border" />
         <div className="text-center">
-          <p className="font-display font-black text-5xl text-foreground">200+</p>
+          <p className="font-display font-black text-5xl text-foreground">80+</p>
           <p className="text-xs text-muted-foreground mt-2">Clientes satisfeitos</p>
         </div>
         <div className="hidden sm:block w-px h-12 bg-border" />
         <div className="text-center">
-          <p className="font-display font-black text-5xl text-foreground">100%</p>
+          <p className="font-display font-black text-5xl text-foreground">90%</p>
           <p className="text-xs text-muted-foreground mt-2">Recomendariam</p>
         </div>
       </motion.div>

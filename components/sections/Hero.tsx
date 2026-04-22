@@ -196,8 +196,8 @@ export function Hero() {
           className="mt-16 flex items-center gap-10"
         >
           {[
-            { value: '500+', label: 'Tatuagens' },
-            { value: '7+',   label: 'Anos' },
+            { value: '80+', label: 'Tatuagens' },
+            { value: '2+',   label: 'Anos' },
             { value: '100%', label: 'Exclusivas' },
           ].map((stat, i) => (
             <div key={stat.label} className="flex items-start gap-10">
